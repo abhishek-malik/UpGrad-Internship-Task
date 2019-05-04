@@ -37,7 +37,7 @@ def if_interested(product_id):
 
 		msg = Message("New Product Request",
 	                  sender=email,
-	                  recipients=["abhishek.malik2015@vit.ac.in"])
+	                  recipients=["Your Email"])
 		msg.body = str(product_id)+" "+str(product_name)+" "+str(product_details)+" By:"+name+" Comments:"+comment
 		mail.send(msg)
 		flash("Mail Sent")
