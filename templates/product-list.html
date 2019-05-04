@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block body %}
+	<div class="container">
+		<br>
+	<form action="{{ url_for('product_list') }}" method="post">
+        <div class="col s12 row">
+        	<div class="input-field col s6">
+        		<input id="keyword" type="text" class="validate" name="keyword">
+          		<label for="keyword">Input</label>
+        	</div>	
+        	<div class="col s6"><br>
+        	<button class="btn waves-effect waves-light" type="submit" name="action">Search
+    			<i class="material-icons right"></i>
+  			</button>
+  			</div>
+  		</div>
+    </form>
+    <br>
+    <div class="row">
+    {% for a, b, c in data1 %}
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-content" style="border-bottom: 4px solid #f06292;">
+              {% for b1 in b %}
+              <span class="card-title">{{b1}}</span>
+              {% endfor %}
+
+              {% for ba1 in a %}
+              <p>Product Id : {{a1}}</p>
+              {% endfor %}
+
+              {% for c1 in c %}
+              <P>{{ c1 }}</P>
+              {% endfor %}
+            </div>
+            <div class="card-action" >
+              {% for d1 in a %}
+              <a class = "black-text" href="/product-list/{{d1}}">Interested</a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+    {% endfor %}
+	</div>
+    <br><br>
+    <div class="row">
+    {% for product_id, product_name, product_details in data %}
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-content" style="border-bottom: 4px solid #f06292;">
+              {% for pname in product_name %}
+              <span class="card-title">{{pname}}</span>
+              {% endfor %}
+
+              {% for pid in product_id %}
+              <p>Product Id : {{pid}}</p>
+              {% endfor %}
+
+              {% for pd in product_details %}
+              <P>{{ pd }}</P>
+              {% endfor %}
+            </div>
+            <div class="card-action" >
+              {% for e1 in product_id %}
+              <a class = "black-text" href="/product-list/{{e1}}">Interested</a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+    {% endfor %}
+  </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block body %}
+	<div class="container">
+		<form action="{{url_for('new_product')}}" method="POST">
+			<div class="row">
+			<div class="col s12">
+				<h3 class="header">Add Product details</h3	>
+			</div>
+			<div class="input-field col s6">
+          		<input id="product_id" type="text" class="validate" name="product_id">
+          		<label for="product_id">Product Id</label>
+        	</div>
+        	<div class="input-field col s12">
+          		<input id="product_name" type="text" class="validate" name="product_name">
+          		<label for="product_name">Product Name</label>
+        	</div>
+        	<div class="input-field col s12">
+          		<textarea id="product_details" class="materialize-textarea" name="product_details"></textarea>
+          		<label for="product_details">Product Details</label>
+        	</div>
+        	<br>
+        	<div class="col s12">
+        	<button class="btn waves-effect waves-light" type="submit" name="action">Add
+    			<i class="material-icons right"></i>
+  			</button>
+  			</div>
+        	</div>
+		</form>
+	</div>
+{% endblock %}

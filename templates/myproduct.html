@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block body %}
+	<div class="container">
+	<div class="row col s12">
+		<div>
+			<h4>{{product_name}}</h4>
+			<h6>ID : {{product_id}}</h6>
+			<p>Details : {{product_details}}</p>
+		</div>
+		<form action="{{url_for('if_interested',product_id=product_id)}}" method="POST">
+		<div>
+			<div class="input-field">
+          		<input id="customer_name" type="text" class="validate" name="customer_name">
+          		<label for="customer_name">Your Name</label>
+        	</div>
+        	<div class="input-field">
+          		<input id="customer_email" type="email" class="validate" name="customer_email">
+          		<label for="customer_email">Your E-mail</label>
+        	</div>
+        	<div class="input-field">
+          		<textarea id="customer_comments" class="materialize-textarea" name="customer_comments"></textarea>
+          		<label for="customer_comments">Comments</label>
+        	</div>
+		</div>
+		<br>
+		<div>
+			<button class="btn waves-effect waves-light" type="submit" name="action">Mail
+  			</button>
+		</div>
+		</form>
+	</div>
+	</div>
+{% endblock %}
