@@ -113,6 +113,7 @@ def new_product():
 
 @app.route('/')
 def home():
+	#Run this only once to initialize the database.
 	'''
 	conn = sqlite3.connect('database.db')
 	print("Opened database successfully")
