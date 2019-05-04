@@ -1,7 +1,7 @@
 # UpGrad-Internship-Task
 Product showing/searching webpage with mailing functionality using FLASK
 
-I have added the required screenshots in this document.
+I have added the required screenshots in the pdf document(Demo-Screenshots.pdf) listed above.
 
 Prerequisites:
 Create a Virtual environment.
